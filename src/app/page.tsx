@@ -74,12 +74,16 @@ function GoogleMapsIcon({ className = "w-6 h-6" }: { className?: string }) {
   );
 }
 
+const whatsappMessage = encodeURIComponent(
+  "¡Hola SHIFT Barbería! Quisiera agendar una cita. ¿Cuáles son los horarios disponibles?"
+);
+
 const links: LinkItem[] = [
   {
     id: "whatsapp",
     title: "Reservas por WhatsApp",
     subtitle: "Agenda tu cita y atención personalizada",
-    href: "https://wa.me/51950141980",
+    href: `https://wa.me/51950141980?text=${whatsappMessage}`,
     icon: <WhatsAppIcon className="h-6 w-6" />,
     badge: "Directo",
     isPrimary: true,
